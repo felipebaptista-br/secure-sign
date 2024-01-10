@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Sign</title>
+    <link rel="stylesheet" href="../static/index.css">
+    <link rel="stylesheet" href="../static/global.css">
+    <link rel="stylesheet" href="../static/ui/ui.css">
+</head>
+
+<body>
+    <div class="container container-flex container-flex-space-between">
+        <div class="background">
+            <h1 class="uppercase">Sign in to your</h1>
+            <h1 class="uppercase color-purple">adventure!</h1>
+        </div>
+        <div class="index-container">
+            <div class="index-content">
+                <h1 class="uppercase">Sign In</h1>
+                <form action="/auth" method="post" class="index-form">
+                    <p>Sign in with email address</p>
+                    <input id="email" name="email" placeholder="Yourname@gmail.com" type="email" class="ui-input">
+                    <input id="password" name="password" placeholder="Yourpassword" type="password" class="ui-input">
+                    <button type="submit" class="ui-button-linear">Sign In</button>
+            </div>
+            <hr />
+            <div class="index-social-midia">
+                <p class="index-social-midia-title">Or continue with</p>
+                <section class="midia">
+                    <button class="ui-button"><img class="icon-midia" src="../static/assets/icons/google.svg"
+                            alt="Logo Google"> Google</button>
+                    <button class="ui-button"><img class="icon-midia" src="../static/assets/icons/facebook.svg"
+                            alt="Logo Facebook"> Facebook</button>
+                </section>
+                <p>By registering you with our <span class="color-purple">Terms and Conditions</span></p>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

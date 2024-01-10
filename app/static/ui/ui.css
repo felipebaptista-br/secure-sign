@@ -1,0 +1,47 @@
+.ui-input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #261046;
+    color: #FFFFFF;
+}
+
+.ui-input::placeholder {
+    color: #A4A4A4;
+}
+
+.ui-button-linear {
+    width: 100%;
+    cursor: pointer;
+    padding: 15px 0px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    background: linear-gradient(45deg, #501794, #3E70A1);
+    color: #FFFFFF;
+}
+
+.ui-button-linear:hover {
+    background: #501794;
+}
+
+.ui-button {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 0px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background-color: #3B2063;
+    color: #FFFFFF;
+}
+
+.ui-button:hover {
+    transition: .4s;
+    background-color: #261046;
+}

@@ -1,0 +1,20 @@
+.register-form {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border: 3px solid #9D5CE9;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.register-form a {
+    color: #FFFF;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.register-form a:hover {
+    color: #dcdcdc;
+    text-decoration: underline;
+}
