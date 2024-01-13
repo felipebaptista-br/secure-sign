@@ -5,11 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/global.css">
+    <link rel="stylesheet" href="../static/ui/ui.css">
+    <link rel="stylesheet" href="../static/dashboard.css">
     <title>Dashboard</title>
 </head>
 
 <body>
-    <h1>Dashboard</h1>
+    <div class="dashboard-background container container-flex container-flex-center container-flex-column">
+        <h1 class="dashboard-title">Dashboard</h1>
+        <table class="dashboard-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr class="tr">
+                    <td class="td">{{ user.id }}</td>
+                    <td class="td">{{ user.name }}</td>
+                    <td class="td">{{ user.email }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>

@@ -19,26 +19,58 @@
         <div class="index-container">
             <div class="index-content">
                 <h1 class="uppercase">Sign In</h1>
-                <form action="/auth" method="post" class="index-form">
+                <div class="index-form">
                     <p>Sign in with email address</p>
                     <input id="email" name="email" placeholder="Yourname@gmail.com" type="email" class="ui-input">
                     <input id="password" name="password" placeholder="Yourpassword" type="password" class="ui-input">
-                    <button type="submit" class="ui-button-linear">Sign In</button>
-            </div>
-            <hr />
-            <div class="index-social-midia">
-                <p class="index-social-midia-title">Or continue with</p>
-                <section class="midia">
-                    <button class="ui-button"><img class="icon-midia" src="../static/assets/icons/google.svg"
-                            alt="Logo Google"> Google</button>
-                    <button class="ui-button"><img class="icon-midia" src="../static/assets/icons/facebook.svg"
-                            alt="Logo Facebook"> Facebook</button>
-                </section>
-                <p>By registering you with our <span class="color-purple">Terms and Conditions</span></p>
+                    <button onclick="handleSubmitLogin(event)" class="ui-button-linear">Sign In</button>
+                </div>
+                <hr />
+                <div class="index-social-midia">
+                    <p class="index-social-midia-title">Or continue with</p>
+                    <section class="midia">
+                        <button class="ui-button"><img class="icon-midia" src="../static/assets/icons/google.svg"
+                                alt="Logo Google"> Google</button>
+                        <button class="ui-button"><img class="icon-midia" src="../static/assets/icons/facebook.svg"
+                                alt="Logo Facebook"> Facebook</button>
+                    </section>
+                    <p>By registering you with our <span class="color-purple">Terms and Conditions</span></p>
+                </div>
             </div>
         </div>
     </div>
-    </div>
+
+    <script>
+        const handleSubmitLogin = async (event) => {
+            event.preventDefault();
+
+            const formDataAuth = {
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value
+            };
+
+            const headers = new Headers();
+            headers.append('Content-Type', 'application/json');
+            headers.append('Accept', 'application/json');
+
+            try {
+                const response = await fetch('http://localhost:5000/auth', {
+                    method: 'POST',
+                    headers: headers,
+                    body: JSON.stringify(formDataAuth),
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                console.log(data);
+            } catch (error) {
+                console.error('Erro na requisição:', error.message);
+            }
+        };
+    </script>
 </body>
 
 </html>

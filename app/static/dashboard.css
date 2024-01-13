@@ -1,0 +1,39 @@
+.dashboard-background {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../static/assets/background.svg');
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.dashboard-title {
+    width: 850px;
+    padding-bottom: 25px;
+}
+
+.dashboard-table {
+    width: 850px;
+    border: 2.5px solid #9D5CE9;
+}
+
+.dashboard-table thead {
+    background-color: #000;
+}
+
+.dashboard-table th {
+    padding: 15px 0px;
+}
+
+.tr {
+    cursor: pointer;
+    background-color: #1d1d1d;
+}
+
+.tr:hover {
+    transition: .4s;
+    background-color: #9D5CE9;
+}
+
+.td {
+    text-align: center;
+    padding: 15px 0px;
+}
